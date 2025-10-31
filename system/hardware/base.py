@@ -235,15 +235,19 @@ class HardwareBase(ABC):
 
   @staticmethod
   def get_ignition_state(panda_states) -> bool:
+    # Filter out unknown panda types
     valid_states = [ps for ps in panda_states if ps.pandaType != log.PandaState.PandaType.unknown]
     if not valid_states:
       return False
 
+    # Initialize persistent state for CAN ignition detection
     if not hasattr(HardwareBase.get_ignition_state, '_seen_can'):
       HardwareBase.get_ignition_state._seen_can = False
 
+    # Check CAN-based ignition (priority over line ignition)
     if any(ps.ignitionCan for ps in valid_states):
       HardwareBase.get_ignition_state._seen_can = True
       return True
 
+    # Fall back to line ignition if CAN never detected
     return False if HardwareBase.get_ignition_state._seen_can else any(ps.ignitionLine for ps in valid_states)

@@ -224,7 +224,7 @@ def hardware_thread(end_event, hw_queue) -> None:
 
     if sm.updated['pandaStates'] and len(pandaStates) > 0:
 
-      # Set ignition based on improved logic that prioritizes ignitionCan
+      # Set ignition based on any panda connected
       onroad_conditions["ignition"] = HardwareBase.get_ignition_state(pandaStates)
 
       pandaState = pandaStates[0]
