@@ -18,6 +18,7 @@ from openpilot.common.params import Params
 from openpilot.common.realtime import DT_HW
 from openpilot.selfdrive.selfdrived.alertmanager import set_offroad_alert
 from openpilot.system.hardware import HARDWARE, TICI, AGNOS
+from openpilot.system.hardware.base import HardwareBase
 from openpilot.system.loggerd.config import get_available_percent
 from openpilot.system.statsd import statlog
 from openpilot.common.swaglog import cloudlog
@@ -223,8 +224,8 @@ def hardware_thread(end_event, hw_queue) -> None:
 
     if sm.updated['pandaStates'] and len(pandaStates) > 0:
 
-      # Set ignition based on any panda connected
-      onroad_conditions["ignition"] = any(ps.ignitionLine or ps.ignitionCan for ps in pandaStates if ps.pandaType != log.PandaState.PandaType.unknown)
+      # Set ignition based on improved logic that prioritizes ignitionCan
+      onroad_conditions["ignition"] = HardwareBase.get_ignition_state(pandaStates)
 
       pandaState = pandaStates[0]
 
