@@ -1,0 +1,5 @@
+
+|Make|Model|Trims|Decision|Min ACC|Min LT|Hardware|Software|Notes|Videos|
+|---|---|---|---|---|---|---|---|---|---|
+|Mazda|CX-5 2022-24|All|Stock|0 mph|0 mph|[![star](assets/icon-star-full.svg)](##)|[![star](assets/icon-star-full.svg)](##)|<details><summary>Parts</summary><sub>- 1 Mazda connector<br>- 1 RJ45 cable (7 ft)<br>- 1 comma 3X<br>- 1 comma power v2<br>- 1 harness box<br>- 1 mount<br>- 1 right angle OBD-C cable (1.5 ft)<br><a href="https://comma.ai/shop/comma-3x.html?make=Mazda&model=CX-5 2022-24">Buy Here</a></sub></details>||
+|Mazda|CX-9 2021-23|All|Stock|0 mph|28 mph|[![star](assets/icon-star-full.svg)](##)|[![star](assets/icon-star-full.svg)](##)|<details><summary>Parts</summary><sub>- 1 Mazda connector<br>- 1 RJ45 cable (7 ft)<br>- 1 comma 3X<br>- 1 comma power v2<br>- 1 harness box<br>- 1 mount<br>- 1 right angle OBD-C cable (1.5 ft)<br><a href="https://comma.ai/shop/comma-3x.html?make=Mazda&model=CX-9 2021-23">Buy Here</a></sub></details>|<a href="https://youtu.be/dA3duO4a0O4" target="_blank"><img height="18px" src="assets/icon-youtube.svg"></img></a>|
